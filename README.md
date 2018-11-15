@@ -1,5 +1,5 @@
 # mframe
-A little gaMeFRAME -- have fun and learn a little. 
+A little gaMeFRAME -- have some fun and learn a little. 
 
 ## What you can do:
 
