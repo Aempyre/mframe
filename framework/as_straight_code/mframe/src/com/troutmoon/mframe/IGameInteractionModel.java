@@ -13,6 +13,16 @@ public interface IGameInteractionModel {
     public static int ITEM_1       = 1;
     public static int ITEM_2       = 2;
 
+
+    public static String quitCommand        = "q";
+    public static String goLeftCommand      = "a";
+    public static String goRightCommand     = "d";
+    public static String goForwardCommand   = "w";
+    public static String goBackCommand      = "s";
+    public static String selectFirstCommand = "1";
+    public static String selectSecondCommand= "2";
+
+
     public GameCLConfig gameConfig = new GameCLConfig();
     public void setDirectionsOfMotion(GameCLConfig config);
 
@@ -29,11 +39,10 @@ public interface IGameInteractionModel {
 
     //public void putdown( int item );
 
-
     public boolean setGreeting(String newGreeting);
     //public String  getGreeting();
-    
     //public boolean setMainMenu(String mainMenu);
+
     public boolean setVictoryMessage(String victory);
     public String  getVictoryMessage();
     public boolean setLossMessage(String consolation);

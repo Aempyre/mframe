@@ -1,5 +1,5 @@
 /*
- * Chum Chum as an MFrame interactive game.
+ * Chum Chum as an MFrame interactive game -- ChumChumGameModel.
  */
 import com.troutmoon.mframe.IGameInteractionModel;
 import com.troutmoon.mframe.GameCLInteractive;
@@ -15,7 +15,8 @@ public class ChumChumGameModel implements IGameInteractionModel {
 
     /* This represents a simple model for a simple game,
        one is free to get much more complex as long as
-       your internal implementation is correct.  */
+       your internal implementation is correct an you 
+       serve the implemented interface appropriately.  */
 
     private static final int STATE_INITIAL            = 00;
 
@@ -107,6 +108,7 @@ public class ChumChumGameModel implements IGameInteractionModel {
                 interactionEnabled = true;
                 return encounterChumChumAndTakeAction;
                 //break;
+
             case STATE_DOWN_THE_MOUNTAIN: 
                 interactionEnabled = true;
                 return encounterDownTheMountainAndTakeAction;
@@ -125,6 +127,7 @@ public class ChumChumGameModel implements IGameInteractionModel {
                 }
                 return "error 1";
                 //break;
+
             case STATE_CLIFF: 
                 if (playerHas == CHUMCHUM) {
                     gameState = STATE_LOST;
@@ -138,6 +141,7 @@ public class ChumChumGameModel implements IGameInteractionModel {
                 }
                 return "error 1";
                 //break;
+
             case STATE_ELEPHANTS: 
                 if (playerHas == PEANUTS) {
                     gameState = STATE_LOST;
@@ -151,6 +155,7 @@ public class ChumChumGameModel implements IGameInteractionModel {
                 }
                 return "error 1";
                 //break;
+
             case STATE_CHIMPANZEES: 
                 if (playerHas == PEANUTS) {
                     gameState = STATE_VICTORY;
@@ -178,7 +183,6 @@ public class ChumChumGameModel implements IGameInteractionModel {
     public boolean isInteractionEnabled() {
         return interactionEnabled;
     }
-
 
 
     public String processInteraction( int item ) {
