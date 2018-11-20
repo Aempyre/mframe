@@ -3,8 +3,8 @@ package com.troutmoon.mframe;
 public interface IGameInteractionModel {
 
     public static int GO_LEFT      = 1;
-    public static int GO_FORWARD   = 2;
-    public static int GO_RIGHT     = 3;
+    public static int GO_RIGHT     = 2;
+    public static int GO_FORWARD   = 3;
     public static int GO_BACK      = 4;
 
     public static int GO_UP        = 5;

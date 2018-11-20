@@ -1,5 +1,5 @@
 /*
- * Chum Chum as an MFrame interactive game.
+ * Chum Chum as an MFrame interactive game -- ChumChumMFGame.
  */
 import com.troutmoon.mframe.GameCLInteractive;
 

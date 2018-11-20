@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class InteractionLoop {
 
+    // if debug we can output debug messages.
+    private boolean debug = true;
+
+
     private boolean running = false; 
 
     // boolean hasGreeting     = false;
@@ -78,7 +82,7 @@ public class InteractionLoop {
                     whichWay = gameModel.processInteraction(IGameInteractionModel.ITEM_1);
                 } else 
                 if ( userInputCommand == IGameInteractionModel.ITEM_2 ) {
-                    whichWay = gameModel.processInteraction(IGameInteractionModel.ITEM_1);
+                    whichWay = gameModel.processInteraction(IGameInteractionModel.ITEM_2);
                 } else {
                     // invalid input message and continue around the loop.
                 }
@@ -91,6 +95,7 @@ public class InteractionLoop {
                  running = false;
             } else {
                 userInputCommand = Integer.parseInt(userInputString);
+                if (debug) GameCLView.display(userInputString + " / " + userInputCommand);
                 gameModel.goDirection(userInputCommand);
             }
             

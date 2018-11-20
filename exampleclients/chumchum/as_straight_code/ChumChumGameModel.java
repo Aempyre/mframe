@@ -10,6 +10,9 @@ import java.util.Scanner;
 
 public class ChumChumGameModel implements IGameInteractionModel {
 
+    // if debug we can output debug messages.
+    private boolean debug = true;
+
     /* This represents a simple model for a simple game,
        one is free to get much more complex as long as
        your internal implementation is correct.  */
@@ -40,8 +43,8 @@ public class ChumChumGameModel implements IGameInteractionModel {
 
     private static final int CHUMCHUM  = 10;
     private static final int PARACHUTE = 20;
-    private static final int PEANUTS   = 10;
-    private static final int MOUSE     = 20;
+    private static final int PEANUTS   = 30;
+    private static final int MOUSE     = 40;
 
     private boolean interactionEnabled = false;
 
@@ -166,8 +169,7 @@ public class ChumChumGameModel implements IGameInteractionModel {
 
             default:  
                 return "error 2";       
-                //break;
-                        
+                //break;            
         }
 
     }
@@ -181,6 +183,8 @@ public class ChumChumGameModel implements IGameInteractionModel {
 
     public String processInteraction( int item ) {
 
+        if (debug) System.out.println("processInteraction( " + item + " )");
+
         switch (gameState) {
 
             case STATE_CHUMCHUM: 
@@ -191,8 +195,8 @@ public class ChumChumGameModel implements IGameInteractionModel {
                     playerHas = PARACHUTE;
                 }  
                 interactionEnabled = false;
-                return whichWay;
-                //break;
+                //return whichWay;
+                break;
 
             case STATE_DOWN_THE_MOUNTAIN: 
                 if ( item == IGameInteractionModel.ITEM_1 ) {
@@ -202,16 +206,27 @@ public class ChumChumGameModel implements IGameInteractionModel {
                     playerHas = MOUSE;
                 }  
                 interactionEnabled = false;
-                return whichWay;
-                //break;
+                //return whichWay;
+                break;
 
             default:   
-                return "error a";      
-                //break;
+                //return "error a";      
+                break;
                         
         }
 
+        if (debug) {
+            System.out.println("player has  the ");
+            if ( playerHas == CHUMCHUM ) { System.out.println("CHUMCHUM."); }
+            else  if ( playerHas == PARACHUTE ) { System.out.println("PARACHUTE."); }
+            else  if ( playerHas == PEANUTS ) { System.out.println("PEANUTS."); }
+            else  if ( playerHas == MOUSE ) { System.out.println("MOUSE."); }
+        }
+
+        return whichWay;
+
     }
+
     public void putdown( int item ) {
         playerHas = NOTHING;
     }
@@ -226,6 +241,8 @@ public class ChumChumGameModel implements IGameInteractionModel {
 
 
     public void goDirection( int moveDirection) {
+
+        if (debug) System.out.println("goDirection( " + moveDirection + " )");
 
         switch (gameState) {
             case STATE_INITIAL: 
