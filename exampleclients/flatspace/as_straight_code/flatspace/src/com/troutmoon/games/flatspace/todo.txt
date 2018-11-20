@@ -1,0 +1,37 @@
+How to build:
+C:\Users\worterschmidt\areas_of_interest\projects_troutmoon\gaMeframe\
+flatspaceAnte\src>javac -sourcepath . -cp ./j3dutils.jar 
+com/troutmoon/games/flatspace/FlatSpaceGame.java
+
+How to run:
+C:\Users\worterschmidt\areas_of_interest\projects_troutmoon\gaMeframe\
+flatspaceAnte\src>java -cp .;./j3dutils.jar 
+com.troutmoon.games.flatspace.FlatSpaceGame 48 bg1.jpg
+
+
+
+
+...flatspaceAnte\src> javac -sourcepath . -cp ./j3dutils.jar com/troutmoon/games/flatspace/FlatSpaceGame.java
+
+...flatspaceAnte\src> java -cp .;./j3dutils.jar com.troutmoon.games.flatspace.FlatSpaceGame 60 10
+
+
+
+
+
+
+Work List:
+
+* Create a parent class for ships.  Among other things make it compute and store
+  the "center of mass" (prolly geometric centriod or an approx. thereof).
+   
+*  About the keyboard control issue (one ships controls hogging the response):  
+...seems to be ameliorated now I've eliminated statistics gathering and the
+...render versus just update the game state stuff (which leads to a task:...
+
+*  Put update and render if time to render has passed code in (don't worry if 
+   the chance to render comes late as the above works for that too).
+   
+   ?? Am I properly managing the time interval for the game state update
+      (i.e. not letting accelerations be affected by the processing speed,
+            but instead be keyed off ration of elapsed/unit time).

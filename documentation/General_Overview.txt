@@ -1,0 +1,20 @@
+Two basic game loops:
+
+
+Simulation.
+* Time based physical simulation loop that interacts with the client games
+  object, logic, input, and data models.
+
+
+
+Interactive.
+* Turn based loop that plugs into the client games logic, input & output
+  facilities, and data model.
+
+
+
+note:  in future could combine in a way by embedding little simulation games
+       in stages / pages of interactive adventures / novels where the starting
+       configuration of the embedded simulation is based on the state of the
+       interactive game at that time, and the result of the simulation is fed
+       back into the interactive game.

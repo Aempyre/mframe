@@ -1,0 +1,31 @@
+/*
+ * Chum Chum main to start it
+ */
+
+public class ChumChum {
+
+    public static void main(String[] args) {
+        
+        // if debug we can output debug messages.
+        boolean debug = true;
+        
+        // Create the interactive game, passing the properties:
+        ChumChumMFGame chumChumGame  = new ChumChumMFGame();
+        ChumChumGameModel gameModel  = new ChumChumGameModel(chumChumGame);
+
+        chumChumGame.setGameModelOnGame(gameModel);
+        
+        // Start the game:
+        boolean gameStartSuccess = chumChumGame.start();
+  
+        if (debug) {
+            if (gameStartSuccess) {
+                System.out.println("DEBUG:  Game started successfully.");
+            } else {
+                System.out.println("DEBUG:  Game failed to start...");
+            }
+        }
+        
+    }
+    
+}

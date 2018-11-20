@@ -1,0 +1,2 @@
+C:\Users\worterschmidt\areas_of_interest\projects_troutmoon\gaMeframe\flatspaceAnte\src>
+java -cp .;./j3dutils.jar com.troutmoon.games.flatspace.FlatSpaceGame 48 bg1.jpg

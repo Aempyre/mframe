@@ -1,0 +1,7 @@
+Name: com/troutmoon/mframe/
+Specification-Title: M.Frame game framework
+Specification-Version: 0.9.0
+Specification-Vendor: Troutmoon, Inc.
+Implementation-Title: com.troutmoon.mframe 
+Implementation-Version: build000
+Implementation-Vendor: Troutmoon, Inc.
