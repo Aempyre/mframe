@@ -32,9 +32,9 @@ First of all you need Java, you probably already have this but just in case:
 ## What you can do:
 
 ### Play the example games that are clients of the framework.
-Change to:  mframe/exampleclients/chumchum/as_straight_code/
-Enter buildchum
-Enter runchum
+Change to:  mframe/exampleclients/chumchum/as_straight_code/   
+Enter buildchum   
+Enter runchum   
 
 ### Do you own game as a client of the framework as provided by the executable (.jar), files.
 TBD:  How to do your own game.
